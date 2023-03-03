@@ -1,0 +1,8 @@
+1.leia a temperatura
+2. leia unidade
+3.se a unidade igual a celsius
+4.resultado= temperatura * 1.8 + 32 
+5.escreva 0 resultado é
+6.senão
+7. resultado =(temperatura - 32)/1.8
+8.escreva 0 resultado é resultado 
