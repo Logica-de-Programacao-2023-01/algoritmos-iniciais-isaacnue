@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+    var capital, taxa, tempo float64
+
+    fmt.Print("Digite o capital inicial: ")
+    fmt.Scanln(&capital)
+
+    fmt.Print("Digite a taxa de juros (em decimal): ")
+    fmt.Scanln(&taxa)
+
+    fmt.Print("Digite o tempo (em anos): ")
+    fmt.Scanln(&tempo)
+
+    montante := capital * (1 + taxa) * tempo
+
+    fmt.Println("O montante após", tempo, "anos é:", montante)
+}
