@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func potencia(base, expoente int) int {
+    resultado := 1
+
+    for i := 0; i < expoente; i++ {
+        resultado *= base
+    }
+
+    return resultado
+}
+
+func main() {
+    var base, expoente int
+
+    fmt.Print("Digite a base: ")
+    fmt.Scanln(&base)
+
+    fmt.Print("Digite o expoente: ")
+    fmt.Scanln(&expoente)
+
+    resultado := potencia(base, expoente)
+
+    fmt.Println("O resultado da potência é:", resultado)
+}
