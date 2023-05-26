@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func buscaLinear(lista []int, elemento int) bool {
+    for _, num := range lista {
+        if num == elemento {
+            return true
+        }
+    }
+    return false
+}
+
+func main() {
+    lista := []int{1, 3, 5, 7, 9}
+    var elemento int
+
+    fmt.Print("Digite um número: ")
+    fmt.Scanln(&elemento)
+
+    encontrado := buscaLinear(lista, elemento)
+
+    if encontrado {
+        fmt.Println("O número", elemento, "foi encontrado na lista.")
+    } else {
+        fmt.Println("O número", elemento, "não foi encontrado na lista.")
+    }
+}
