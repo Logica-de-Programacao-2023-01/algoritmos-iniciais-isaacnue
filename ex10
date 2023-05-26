@@ -1,0 +1,38 @@
+package main
+
+import "fmt"
+
+func main() {
+    var numeros []float64
+    var pesos []float64
+    var total, somaPesos, mediaPonderada float64
+
+    fmt.Println("Digite os números (digite 0 para encerrar a entrada):")
+
+    for {
+        var num float64
+        fmt.Scanln(&num)
+
+        if num == 0 {
+            break
+        }
+
+        numeros = append(numeros, num)
+
+        var peso float64
+        fmt.Print("Digite o peso para o número ", num, ": ")
+        fmt.Scanln(&peso)
+
+        pesos = append(pesos, peso)
+
+        total += num * peso
+        somaPesos += peso
+    }
+
+    if len(numeros) > 0 {
+        mediaPonderada = total / somaPesos
+        fmt.Println("A média ponderada é:", mediaPonderada)
+    } else {
+        fmt.Println("Nenhum número foi inserido.")
+    }
+}
