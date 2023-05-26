@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func main() {
+    var numeros []float64
+    var total, media float64
+
+    fmt.Println("Digite os números (digite 0 para encerrar a entrada):")
+
+    for {
+        var num float64
+        fmt.Scanln(&num)
+
+        if num == 0 {
+            break
+        }
+
+        numeros = append(numeros, num)
+        total += num
+    }
+
+    if len(numeros) > 0 {
+        media = total / float64(len(numeros))
+        fmt.Println("A média é:", media)
+    } else {
+        fmt.Println("Nenhum número foi inserido.")
+    }
+}
